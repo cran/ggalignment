@@ -78,8 +78,7 @@ local_example <-
              alignment = c("lawful good",
                            "chaotic neutral"))
 
-ggalignment(local_example,
-            font_size = 3)
+ggalignment(local_example, font_size = 3)
 
 ## ----url-example--------------------------------------------------------------
 url_example <-
@@ -87,7 +86,8 @@ url_example <-
                      "https://avatars.githubusercontent.com/u/18043377?v=4"),
              alignment = c("lawful good",
                            "chaotic neutral"))
-
-ggalignment(url_example,
-            font_size = 3)
+                           
+try({ # wrapped with a try block here to prevent CRAN issues
+  ggalignment(url_example, font_size = 3)
+ })
 
